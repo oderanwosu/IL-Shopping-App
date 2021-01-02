@@ -6,17 +6,30 @@ void main() {
   runApp(MyApp());
 }
 
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
+  }
+}
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: MyBehavior(),
+          child: child,
+        );
+      },
       theme: ThemeData(
-    primaryColor: kPrimaryColor,
-    accentColor: Colors.orange,
-    hintColor: kPrimaryColor,
-  ),
+        primaryColor: kPrimaryColor,
+        accentColor: Colors.orange,
+        hintColor: kPrimaryColor,
+      ),
       home: Dashboard(),
     );
   }

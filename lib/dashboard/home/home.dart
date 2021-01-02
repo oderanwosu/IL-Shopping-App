@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iL/dashboard/home/feed.dart';
 import 'package:iL/dashboard/home/savedshops.dart';
 import 'package:iL/styles/constants.dart';
 import 'package:iL/styles/size_helpers.dart';
@@ -14,21 +15,23 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(children: [
-        SizedBox(
-          height: displayHeight(context) * 0.02,
-        ),
-        Container(
-            alignment: Alignment.topLeft,
-            padding: EdgeInsets.fromLTRB(displayWidth(context) * 0.04, 0, 0, 0),
-            child: Text(
-              'SAVED SHOPS',
-              style: GoogleFonts.oswald(fontSize: displayWidth(context) * 0.03),
-            )),
-        Shops()
-      ]),
-    );
+    return Column(children: [
+      SizedBox(
+        height: displayHeight(context) * 0.02,
+      ),
+      Container(
+          alignment: Alignment.topLeft,
+          padding: EdgeInsets.fromLTRB(displayWidth(context) * 0.04, 0, 0, 0),
+          child: Text(
+            'SAVED SHOPS',
+            style: GoogleFonts.oswald(fontSize: displayWidth(context) * 0.03),
+          )),
+      Shops(),
+      SizedBox(
+        height: displayHeight(context) * 0.03,
+      ),
+      Feed(),
+    ]);
   }
 }
 

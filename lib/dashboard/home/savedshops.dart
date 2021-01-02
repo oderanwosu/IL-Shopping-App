@@ -13,12 +13,14 @@ class Shops extends StatefulWidget {
 class _ShopsState extends State<Shops> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: ListView(
+        shrinkWrap: true,
         children: <Widget>[
           Container(
-            height: 100.0,
+            height: displayHeight(context) * 0.09,
             child: new ListView(
+              shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               children: [
                 ShopButton(

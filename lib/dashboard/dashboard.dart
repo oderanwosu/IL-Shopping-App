@@ -62,93 +62,95 @@ class _DashboardState extends State<Dashboard>
               'SHOP',
               style: GoogleFonts.oswald(),
             )),
-        body: Container(
-          child: Column(children: [
-            Container(
-              color: kPrimaryColor,
-              child: Column(
-                children: [
-                  Container(
-                      child: Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(),
-                          padding: EdgeInsets.fromLTRB(
-                              displayWidth(context) * 0.05,
-                              displayWidth(context) * 0.03,
-                              displayWidth(context) * 0.05,
-                              displayWidth(context) * 0.03),
-                          height: displayHeight(context) * 0.08,
-                          child: TextField(
-                            textAlignVertical: TextAlignVertical.center,
-                            style: TextStyle(
-                              fontSize: displayWidth(context) * 0.05,
-                            ),
-                            cursorColor: Colors.grey,
-                            decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.search),
-                              hasFloatingPlaceholder: false,
-                              labelText: 'SEARCH TOPS, CLOTHES, SHOPS',
-                              labelStyle: GoogleFonts.roboto(
-                                fontSize: displayWidth(context) * 0.03,
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(children: [
+              Container(
+                color: kPrimaryColor,
+                child: Column(
+                  children: [
+                    Container(
+                        child: Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(),
+                            padding: EdgeInsets.fromLTRB(
+                                displayWidth(context) * 0.05,
+                                displayWidth(context) * 0.03,
+                                displayWidth(context) * 0.05,
+                                displayWidth(context) * 0.03),
+                            height: displayHeight(context) * 0.08,
+                            child: TextField(
+                              textAlignVertical: TextAlignVertical.center,
+                              style: TextStyle(
+                                fontSize: displayWidth(context) * 0.05,
                               ),
-                              filled: true,
-                              fillColor: Colors.white,
+                              cursorColor: Colors.grey,
+                              decoration: InputDecoration(
+                                prefixIcon: Icon(Icons.search),
+                                hasFloatingPlaceholder: false,
+                                labelText: 'SEARCH TOPS, CLOTHES, SHOPS',
+                                labelStyle: GoogleFonts.roboto(
+                                  fontSize: displayWidth(context) * 0.03,
+                                ),
+                                filled: true,
+                                fillColor: Colors.white,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  )),
-                  Container(
-                    child: new TabBar(
-                      controller: _controller,
-                      unselectedLabelColor: kSecondary,
-                      indicatorColor: kSecondary,
-                      labelColor: kSecondary,
-                      labelStyle: GoogleFonts.oswald(
-                        fontSize: displayWidth(context) * 0.03,
-                      ),
-                      tabs: [
-                        new Tab(
-                          iconMargin:
-                              EdgeInsets.all(displayWidth(context) * 0.0),
-                          text: 'HOME',
-                          icon: Icon(Icons.home),
-                        ),
-                        new Tab(
-                          iconMargin:
-                              EdgeInsets.all(displayWidth(context) * 0.0),
-                          icon: Icon(Icons.trending_up),
-                          text: 'TRENDING',
-                        ),
-                        new Tab(
-                          iconMargin:
-                              EdgeInsets.all(displayWidth(context) * 0.0),
-                          icon: Icon(Icons.shopping_cart),
-                          text: 'MY CART',
-                        ),
-                        new Tab(
-                          iconMargin:
-                              EdgeInsets.all(displayWidth(context) * 0.0),
-                          icon: Icon(Icons.note),
-                          text: 'TRANSACTIONS',
-                        ),
                       ],
+                    )),
+                    Container(
+                      child: new TabBar(
+                        controller: _controller,
+                        unselectedLabelColor: kSecondary,
+                        indicatorColor: kSecondary,
+                        labelColor: kSecondary,
+                        labelStyle: GoogleFonts.oswald(
+                          fontSize: displayWidth(context) * 0.03,
+                        ),
+                        tabs: [
+                          new Tab(
+                            iconMargin:
+                                EdgeInsets.all(displayWidth(context) * 0.0),
+                            text: 'HOME',
+                            icon: Icon(Icons.home),
+                          ),
+                          new Tab(
+                            iconMargin:
+                                EdgeInsets.all(displayWidth(context) * 0.0),
+                            icon: Icon(Icons.trending_up),
+                            text: 'TRENDING',
+                          ),
+                          new Tab(
+                            iconMargin:
+                                EdgeInsets.all(displayWidth(context) * 0.0),
+                            icon: Icon(Icons.shopping_cart),
+                            text: 'MY CART',
+                          ),
+                          new Tab(
+                            iconMargin:
+                                EdgeInsets.all(displayWidth(context) * 0.0),
+                            icon: Icon(Icons.note),
+                            text: 'TRANSACTIONS',
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            Container(
-              height: displayHeight(context) * 0.6,
-              child: new TabBarView(
-                controller: _controller,
-                children: [Home(), Home(), Home(), Home()],
+              Container(
+                height: displayHeight(context) * 5,
+                child: new TabBarView(
+                  controller: _controller,
+                  children: [Home(), Home(), Home(), Home()],
+                ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ));
   }
 }
