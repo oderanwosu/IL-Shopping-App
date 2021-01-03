@@ -57,18 +57,16 @@ class _FeedState extends State<Feed> {
           Item(
             itemImageURL:
                 'https://weartesters.com/wp-content/uploads/2018/01/AIR-JORDAN-3-TINKER-1.jpg',
-            userImage:
-                'https://wallpaperaccess.com/full/113677.jpg',
+            userImage: 'https://wallpaperaccess.com/full/113677.jpg',
             userName: "Jordan's Sports Appearal ",
             itemName: "Air Jordans 3",
             itemPrice: '233.00',
             itemSize: "13'",
           ),
-           Item(
+          Item(
             itemImageURL:
                 'https://i.etsystatic.com/25989702/d/il/d911a8/2755064830/il_340x270.2755064830_blbr.jpg?version=0',
-            userImage:
-                'https://i.ytimg.com/vi/WRyz6IV8bV8/maxresdefault.jpg',
+            userImage: 'https://i.ytimg.com/vi/WRyz6IV8bV8/maxresdefault.jpg',
             userName: 'Mr. Beast Merch Store',
             itemName: 'Mr Beast Christmas Sweater',
             itemPrice: '45.99',
@@ -114,6 +112,10 @@ class _ItemState extends State<Item> {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
+      focusColor: kWhite,
+      highlightColor: kWhite,
+      hoverColor: kWhite,
+      splashColor: kWhite,
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       padding: EdgeInsets.all(0),
       child: Container(
@@ -132,6 +134,10 @@ class _ItemState extends State<Item> {
                         image: new NetworkImage(widget.itemImageURL)))),
             SizedBox(height: displayHeight(context) * 0.001),
             FlatButton(
+              focusColor: kWhite,
+              highlightColor: kWhite,
+              hoverColor: kWhite,
+              splashColor: kWhite,
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
               padding: EdgeInsets.all(0),
               child: Row(children: [
@@ -145,8 +151,7 @@ class _ItemState extends State<Item> {
                         shape: BoxShape.circle,
                         image: new DecorationImage(
                             fit: BoxFit.fitHeight,
-                            image: new NetworkImage(
-                                widget.userImage)))),
+                            image: new NetworkImage(widget.userImage)))),
                 SizedBox(width: displayWidth(context) * 0.02),
                 Text(widget.userName,
                     style: GoogleFonts.quicksand(
@@ -179,7 +184,8 @@ class _ItemState extends State<Item> {
                           fontSize: displayHeight(context) * 0.018)),
                 ),
                 Container(
-                    child: Text('Sizes:' + widget.itemSize, style: GoogleFonts.quicksand()))
+                    child: Text('Sizes:' + widget.itemSize,
+                        style: GoogleFonts.quicksand()))
               ],
             )
           ],

@@ -36,6 +36,8 @@ dev_dependencies:
   flutter_launcher_icons: ^0.8.1
   google_fonts: ^1.1.0
   flappy_search_bar: ^1.4.1
+  carousel_slider: ^2.2.1
+  like_button: ^1.0.4
 
 flutter_icons:
   image_path: "images/icon.png"

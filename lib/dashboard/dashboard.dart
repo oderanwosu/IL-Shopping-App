@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:iL/dashboard/home/home.dart';
+import 'package:iL/dashboard/trending/trending.dart';
 
 import '../styles/constants.dart';
 import '../styles/size_helpers.dart';
@@ -105,9 +106,9 @@ class _DashboardState extends State<Dashboard>
                     Container(
                       child: new TabBar(
                         controller: _controller,
-                        unselectedLabelColor: kSecondary,
-                        indicatorColor: kSecondary,
-                        labelColor: kSecondary,
+                        unselectedLabelColor: kWhite,
+                        indicatorColor: kSecondaryColor,
+                        labelColor: kSecondaryColor,
                         labelStyle: GoogleFonts.oswald(
                           fontSize: displayWidth(context) * 0.03,
                         ),
@@ -146,7 +147,7 @@ class _DashboardState extends State<Dashboard>
                 height: displayHeight(context) * 5,
                 child: new TabBarView(
                   controller: _controller,
-                  children: [Home(), Home(), Home(), Home()],
+                  children: [Home(), Trending(), Home(), Home()],
                 ),
               ),
             ]),

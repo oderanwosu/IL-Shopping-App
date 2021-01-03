@@ -77,7 +77,9 @@ class _ShopButtonState extends State<ShopButton> {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
-        onPressed: null,
+      splashColor: kWhite,
+      highlightColor: kWhite,
+        onPressed: (){},
         child: Container(
             child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
