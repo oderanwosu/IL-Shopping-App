@@ -109,9 +109,11 @@ class _DashboardState extends State<Dashboard>
                         unselectedLabelColor: kWhite,
                         indicatorColor: kSecondaryColor,
                         labelColor: kSecondaryColor,
+                        
                         labelStyle: GoogleFonts.oswald(
-                          fontSize: displayWidth(context) * 0.03,
+                          fontSize: displayWidth(context) * 0.026,
                         ),
+                        
                         tabs: [
                           new Tab(
                             iconMargin:

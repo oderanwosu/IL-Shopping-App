@@ -61,7 +61,7 @@ class _TrendingItemsSlideState extends State<TrendingItemsSlide> {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: displayHeight(context) * 0.43,
+        height: displayHeight(context) * 0.4,
         viewportFraction: 1,
         autoPlay: true,
         autoPlayInterval: Duration(seconds: 4),
@@ -249,7 +249,7 @@ class _TrendingItemState extends State<TrendingItem> {
                             displayWidth(context) * .02,
                             displayWidth(context) * .02,
                             displayWidth(context) * .02,
-                            displayWidth(context) * .03),
+                            displayWidth(context) * .05),
                         child: Text(
                           widget.description,
                           maxLines: 2,
